@@ -1,0 +1,331 @@
+/* ----- HTML Tags  ----- */
+body {
+  background-color: #fff;
+  font-size: larger;
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+  color: #000;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0b0;
+}
+
+/* ----- Footer  ----- */
+
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 1em;
+  margin-top: 3em;
+}
+
+footer > ul > li > a {
+  font-size: 1em;
+  color: #fff;
+}
+
+/* ----- Carousel  ----- */
+
+.carousel-item > a > img {
+  width: 100% !important;
+  display: block !important;
+  overflow: hidden !important;
+  image-orientation: from-image;
+  width: 900px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.carousel-item,
+.carousel-item > a {
+  height: 100%;
+}
+
+.carousel,
+.carousel-inner {
+  max-width: 900px;
+  max-height: 600px !important;
+  min-height: 600px !important;
+  background-color: #000;
+}
+
+/* Reset modal carousel image sizes*/
+.modal .carousel,
+.modal .carousel-inner,
+.modal .carousel img {
+  height: 100% !important;
+  width: 100% !important;
+  max-width: 100%;
+  max-height: 100% !important;
+  min-height: 100% !important;
+}
+
+/* ----- Section Titles  ----- */
+
+.section {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 900;
+}
+
+/* ----- Vertical Centered CSS (for paragraphs)  ----- */
+
+.vertical-centered {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* ----- Expandable Education Section  ----- */
+
+.expandable-education-section {
+  display: none;
+  padding: 2em;
+  text-align: center;
+}
+
+/* ----- Navbar  ----- */
+.navbar-brand {
+  color: #f80 !important;
+  font-size: 1.5em;
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navbar-brand:hover {
+  color: #000 !important;
+}
+
+.nav-item {
+  margin-right: 0.3em;
+}
+
+.nav-item > a {
+  font-size: 1em;
+  padding: 1em !important;
+  height: 100%;
+  width: 100%;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#nav-item-1:hover {
+  color: #000;
+}
+
+#nav-item-2:hover {
+  color: #8f0;
+}
+
+#nav-item-3:hover {
+  color: #00437a;
+}
+
+#nav-item-4:hover {
+  color: #f22;
+}
+
+#nav-item-5:hover {
+  color: #82002b;
+}
+
+#nav-item-6:hover {
+  color: #80f;
+}
+
+#nav-item-7:hover {
+  color: #0f8;
+}
+
+/* ----- Navbar Animations ----- */
+.nav-item > a {
+  border-radius: 0.75em 0 0.75rem 0;
+}
+
+.nav-item:hover,
+.nav-item:focus,
+.nav-item > a:hover,
+.nav-item > a:focus {
+  text-decoration: none;
+  background-color: #f80;
+  transition: transform 0.25s;
+  transform: translateY(-0.25em);
+  box-shadow: 0 0.5em 0.5em -0.4em #000;
+}
+.nav-item:active,
+.nav-item > a:active {
+  transition: 0.15s;
+  transform: translateY(0.25em);
+  box-shadow: 0 0 0.5em #000;
+}
+
+/* ----- Language Buttons  ----- */
+
+.btn-link,
+.btn-link:hover {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.language-icon {
+  height: 17px;
+  width: 17px;
+  border: 1px solid #fff;
+  border-radius: 1em;
+}
+
+/* ----- Button Colors  ----- */
+
+.bg-tr {
+  background-color: #E30A17;
+}
+
+.bg-en {
+  background-color: #012169;
+}
+
+.bg-courses {
+  background-color: #f80;
+  color: #000;
+}
+
+.bg-project {
+  background-color: #fc0;
+  color: #000;
+}
+
+.bg-links {
+  background-color: #08f;
+  color: #000;
+}
+
+.bg-close {
+  background-color: #b00;
+  color: #fff;
+}
+
+/* ----- DARK THEME OPERATIONS  ----- */
+
+.dark-body {
+  background-color: #131313;
+}
+
+.dark-main {
+  color: #fff !important;
+}
+
+.dark-modal {
+  background-color: #343a40;
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #131313;
+  }
+
+  main {
+    color: #fff;
+  }
+
+  .bg-light {
+    background-color: #343a40 !important;
+    color: #fff !important;
+  }
+
+  .nav-item > a {
+    color: #fff;
+  }
+
+  #dark-theme-selection {
+    display: none;
+  }
+
+  .modal-content {
+    background-color: #343a40;
+    columns: #fff;
+  }
+}
+
+/* ----- SCREEN SIZE BASED OPERATIONS  ----- */
+
+/* Mobile Devices */
+@media only screen and (max-width: 375px) {
+  .language-text {
+    display: none;
+  }
+}
+@media only screen and (max-width: 575px) {
+  main {
+    width: 100%;
+    padding: 1em;
+  }
+  .crs-size {
+    max-width: 900px;
+    max-height: 400px !important;
+    min-height: 400px !important;
+  }
+  .vertical-centered {
+    margin: 0;
+    position: relative;
+  }
+}
+/* Tablets */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+  main {
+    width: 100%;
+    padding: 1em;
+  }
+  .navbar {
+    font-size: 1.5rem;
+  }
+  .vertical-centered {
+    margin: 0;
+    position: relative;
+  }
+}
+/* Lower Res Desktop - HD*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  main,
+  footer {
+    width: 90%;
+  }
+  .navbar {
+    font-size: 1.5rem;
+  }
+}

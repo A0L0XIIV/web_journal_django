@@ -1,0 +1,1463 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="description" content="Baran Kaya'nın kişisel web sayfası">
+	<meta name="keywords" content="Baran Kaya, Kaya Baran, kayabaran, Yazılım Mühendisi">
+	<meta name="author" content="Baran Kaya">
+    <title>Anasayfa</title>
+    <!-- Bootstrap CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font-Avesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- CSS stylesheets: JS scripts -->
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
+    <script src="{% static 'scripts/index.js' %}"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top px-5 row">
+      <a class="navbar-brand col-8 col-xl-2" href="">BARAN KAYA</a>
+      <!-- Menu button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Setting button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSetting" aria-controls="navbarSetting" aria-expanded="false" aria-label="Toggle settings">
+        <span class="fa fa-cog" aria-hidden="true"></span>
+      </button>
+      <!-- Menu bar -->
+      <div class="collapse navbar-collapse col-0 col-xl-8 text-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a href="#1" id="nav-item-1">Hakkımda</a>
+          </li>
+          <li class="nav-item">
+            <a href="#2" id="nav-item-2">Kariyer</a>
+          </li>
+          <li class="nav-item">
+            <a href="#3" id="nav-item-3">Yüksek Lisans</a>
+          </li>
+          <li class="nav-item">
+            <a href="#4" id="nav-item-4">Lisans</a>
+          </li>
+          <li class="nav-item">
+            <a href="#5" id="nav-item-5">Projelerim</a>
+          </li>
+          <li class="nav-item">
+            <a href="#6" id="nav-item-6">Memleket</a>
+          </li>
+          <li class="nav-item">
+            <a href="#7" id="nav-item-7">Hobilerim</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Settings bar -->
+      <div class="collapse navbar-collapse col-0 col-xl-2 text-center row" id="navbarSetting">
+        <!-- Language buttons -->
+        <div class="col-6">
+          <a href="./" class="btn btn-link bg-en" style="width: max-content;">
+            <div class="row h-100 w-100 p-0 m-0">
+              <div class="col-9 p-0">
+                <span class="language-text">English</span>
+              </div>
+              <div class="col-3 p-0">
+                <img src="{% static 'images/united-kingdom.png' %}" alt="EN" class="language-icon">
+                <!--div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
+                  Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                </div-->
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Dark theme switch -->
+        <div class="custom-control custom-switch col-6 btn btn-dark" id="dark-theme-selection">
+          <input type="checkbox" class="custom-control-input" id="customSwitches" onclick="switchDarkTheme()">
+          <label class="custom-control-label" for="customSwitches">Karanlık Tema</label>
+        </div>
+      </div>
+    </nav>
+    
+    <main class="content text-justify pt-0">
+      <div class="mt-5">
+        <h1 class="text-center">Web sayfama hoşgeldiniz!</h1>
+      </div>
+
+      <div id="1">
+        <h3 class="section">Ben kimim?</h3>
+        <div class="row">
+          <div class="col-xs-12 col-sm-5">
+            <p class="vertical-centered">
+              Benim adım Baran Kaya. 1994 Eskişehir doğumluyum. Üniversite eğitimi için İstanbul'a taşınana kadar Eskişehir'de yaşadım. İstanbul Teknik Üniversitesi'nden (İTÜ) Bilgisayar Mühendisliği lisans derecesine sahibim. İTÜ'den 2018 yılında mezun oldum ve Huawei Türkiye Ar-Ge Merkezi'nde asistan yazılım mühendisi çalışmaya başladım. 11 ay çalıştıktan sonra işimden ayrıldım ve Hamilton/Kanada'daki McMaster Üniversitesi'nde yüksek lisans eğitimime başladım. McMaster Üniversitesi'nden Bilgisayar ve Yazılım (CAS) Mühendisliği Yüksek Lisansı ile mezun oldum. Şu anda Providius'ta Yazılım Mühendisi olarak çalışıyorum. 
+            </p>
+          </div>
+          <div class="col-1 py-3"></div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- Image Carousel (Bootstrap) -->
+            <div
+              id="bkImageCarousel"
+              class="carousel slide carousel-fade"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li data-target="#bkImageCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#bkImageCarousel" data-slide-to="1"></li>
+                <li data-target="#bkImageCarousel" data-slide-to="2"></li>
+                <li data-target="#bkImageCarousel" data-slide-to="3"></li>
+                <li data-target="#bkImageCarousel" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div
+                  class="carousel-item active"
+                  data-toggle="modal"
+                  data-target="#bkImageModal"
+                >
+                  <a href="#bkImageModalCarousel" data-slide-to="0">
+                    <img
+                      src="{% static 'images/baran_kaya_0.jpg' %}"
+                      loading="lazy"
+                      alt="Baran Kaya Image 1"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#bkImageModal"
+                >
+                  <a href="#bkImageModalCarousel" data-slide-to="1">
+                    <img
+                      src="{% static 'images/baran_kaya_1.jpg' %}"
+                      loading="lazy"
+                      alt="Baran Kaya Image 2"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#bkImageModal"
+                >
+                  <a href="#bkImageModalCarousel" data-slide-to="2">
+                    <img
+                      src="{% static 'images/baran_kaya_2.jpg' %}"
+                      loading="lazy"
+                      alt="Baran Kaya Image 3"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#bkImageModal"
+                >
+                  <a href="#bkImageModalCarousel" data-slide-to="3">
+                    <img
+                      src="{% static 'images/baran_kaya_3.jpg' %}"
+                      loading="lazy"
+                      alt="Baran Kaya Image 4"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#bkImageModal"
+                >
+                  <a href="#bkImageModalCarousel" data-slide-to="4">
+                    <img
+                      src="{% static 'images/baran_kaya_13.jpg' %}"
+                      loading="lazy"
+                      alt="Baran Kaya Image 5"
+                    />
+                  </a>
+                </div>
+              </div>
+              <!-- Slider for next and previos images -->
+              <a
+                class="carousel-control-prev"
+                href="#bkImageCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Önceki</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#bkImageCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Sonraki</span>
+              </a>
+            </div>
+
+            <!-- Image Carousel Modal (PopUp) (Bootstrap) -->
+            <div class="modal fade" id="bkImageModal">
+              <!-- Modal size Extra Large for bigger images -->
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="bkName">Benim fotoğraflarım</div>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      title="Close"
+                    >
+                      <i class="fa fa-window-close" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <!-- Without modal body, modal doesn't have any white edges. -->
+                  <div class="modal-body">
+                    <!-- Image Carousel -->
+                    <div
+                      id="bkImageModalCarousel"
+                      class="carousel slide"
+                      data-interval="false"
+                    >
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/baran_kaya_0.jpg' %}"
+                            loading="lazy"
+                            alt="Baran Kaya Image 1"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/baran_kaya_1.jpg' %}"
+                            loading="lazy"
+                            alt="Baran Kaya Image 2"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/baran_kaya_2.jpg' %}"
+                            loading="lazy"
+                            alt="Baran Kaya Image 3"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <img
+                              class="d-block w-100"
+                              src="{% static 'images/baran_kaya_3.jpg' %}"
+                              loading="lazy"
+                              alt="Baran Kaya Image 3"
+                            />
+                            <div class="carousel-caption"></div>
+                          </div>
+                          <div class="carousel-item">
+                              <img
+                                class="d-block w-100"
+                                src="{% static 'images/baran_kaya_13.jpg' %}"
+                                loading="lazy"
+                                alt="Baran Kaya Image 3"
+                              />
+                              <div class="carousel-caption"></div>
+                            </div>
+                      </div>
+                      <!-- Slider for next and previos images -->
+                      <a
+                        class="carousel-control-prev"
+                        href="#bkImageModalCarousel"
+                        role="button"
+                        data-slide="prev"
+                      >
+                        <span
+                          class="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="sr-only"></span>
+                      </a>
+                      <a
+                        class="carousel-control-next"
+                        href="#bkImageModalCarousel"
+                        role="button"
+                        data-slide="next"
+                      >
+                        <span
+                          class="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="sr-only">Sonraki</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of image-->
+          </div>
+        </div>
+      </div>
+
+      <div id="2">
+        <h3 class="section">Kariyer</h3>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <!-- Image Carousel (Bootstrap) -->
+            <div
+              id="careerImageCarousel"
+              class="carousel slide carousel-fade"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li data-target="#careerImageCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#careerImageCarousel" data-slide-to="1"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div
+                  class="carousel-item active"
+                  data-toggle="modal"
+                  data-target="#careerImageModal"
+                >
+                  <a href="#careerImageModalCarousel" data-slide-to="0">
+                    <img
+                      src="{% static 'images/huawei_1.jpg' %}"
+                      loading="lazy"
+                      alt="Huawei Turkey R&D Center Image"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#careerImageModal"
+                >
+                  <a href="#careerImageModalCarousel" data-slide-to="1">
+                    <img
+                      src="{% static 'images/huawei_2.jpg' %}"
+                      loading="lazy"
+                      alt="Huawei Colleagues"
+                    />
+                  </a>
+                </div>
+              </div>
+              <!-- Slider for next and previos images -->
+              <a
+                class="carousel-control-prev"
+                href="#careerImageCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only"></span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#careerImageCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Sonraki</span>
+              </a>
+            </div>
+
+            <!-- Image Carousel Modal (PopUp) (Bootstrap) -->
+            <div class="modal fade" id="careerImageModal">
+              <!-- Modal size Extra Large for bigger images -->
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="careerName">Kariyer Fotoğraflarım</div>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      title="Close"
+                    >
+                      <i class="fa fa-window-close" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <!-- Without modal body, modal doesn't have any white edges. -->
+                  <div class="modal-body">
+                    <!-- Image Carousel -->
+                    <div
+                      id="careerImageModalCarousel"
+                      class="carousel slide"
+                      data-interval="false"
+                    >
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/huawei_1.jpg' %}"
+                            loading="lazy"
+                            alt="Huawei Turkey R&D Center Image"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/huawei_2.jpg' %}"
+                            loading="lazy"
+                            alt="Huawei Colleagues"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                      </div>
+                      <!-- Slider for next and previos images -->
+                      <a
+                        class="carousel-control-prev"
+                        href="#careerImageModalCarousel"
+                        role="button"
+                        data-slide="prev"
+                      >
+                        <span
+                          class="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="sr-only"></span>
+                      </a>
+                      <a
+                        class="carousel-control-next"
+                        href="#careerImageModalCarousel"
+                        role="button"
+                        data-slide="next"
+                      >
+                        <span
+                          class="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="sr-only">Sonraki</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of image-->
+          </div>
+          <div class="col-1 py-3"></div>
+          <div class="col-xs-12 col-sm-5">
+            <p class="vertical-centered">
+              Lisans derecemle mezun olduktan sonra 2018 Ağustos ayında Huawei Türkiye Ar-Ge Merkezi'nde çalışmaya başladım. Wireless               DC departmanında assistan yazılım mühendisi olarak çalışmaktaydım. Ana projemiz baz istasyonu yönetim ve gözlem sistemiydi. Benim takımım bina içi baz istasyonun yazılımı üzerinde çalışıyordu. Genellikle bu projenin hata ayıklamaları ve özellik eklemeleriyle uğraşıyorduk. Sistem, tarayıcıda Java applet uygulaması kullanan bir web projesiydi. Sunucu tarafı C ile yazılmıştı ancak ben çoğunlukla Java ve JavaScript olan istemci üzerinde çalıştım. Daha sonra ikincil bir proje üzerinde çalışmaya başladık. Bireysel hedefler için dahili bir web sitesi projesiydi. Sistemi sıfırdan tasarladık ve ön uçta Angular, arka uçta Java Spring ve veritabanı olarak PostgreSQL kullandık. Çoğunlukla veritabanı tasarımı üzerine çalıştım ve ekip olarak projeyi uygulamaya başladık. Ama sonra diğer ana projeler ikincil projemizi engelledi ve durdu. 11 aylık Huawei yolculuğunun ardından, yüksek lisans eğitimi için işimden ayrıldım. Yüksek lisans mezuniyetimin ardından şu anda Providius'ta Yazılım Mühendisi olarak çalışıyorum. Canlı TV yayını için yazılım geliştiriyoruz.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="3">
+        <h3 class="section">Yüksek Lisans Derecesi</h3>
+        <div class="row">
+          <div class="col-xs-12 col-sm-5">
+            <p>
+              McMaster Bilişim ve Yazılım bölümünün Mühendislik Yüksek Lisans (M.Eng.) programını okudum. Tezsiz yüksek lisans derecesi olması sebebiyle çalışmalarım sırasında 6 lisansüstü dersi alıp, 1 MEng bitirme projesi tamamladım. Aldığım kurslar, yüksek lisans projem ve McMaster hakkında daha fazla bilgiye düğmelerden erişebilirsiniz.
+            </p>
+            <div class="mx-auto text-center">
+              <button 
+                class="btn btn-sm bg-courses" 
+                onclick="$('#graduate-courses').toggle();$('#meng-project').hide();$('#mcmaster-links').hide();">
+                Dersler
+              </button>
+              <button 
+                class="btn btn-sm bg-project" 
+                onclick="$('#graduate-courses').hide();$('#meng-project').toggle();$('#mcmaster-links').hide();">
+                Master Projem
+              </button>
+              <button 
+                class="btn btn-sm bg-links" 
+                onclick="$('#graduate-courses').hide();$('#meng-project').hide();$('#mcmaster-links').toggle();">
+                McMaster Websiteleri
+              </button>
+              <button 
+                class="btn btn-sm bg-close" 
+                onclick="$('#graduate-courses').hide();$('#meng-project').hide();$('#mcmaster-links').hide();">
+                <i class="fa fa-window-close text-white" aria-hidden="true"></i>
+              </button>
+              <div 
+                id="graduate-courses"
+                class="expandable-education-section">
+                <ul>
+                  <li>Software Design</li>
+                  <li>Model-Driven Engineering</li>
+                  <li>Web Systems and Web Computing</li>
+                  <li>Advance Topics in Data Management</li>
+                  <li>Big Data Systems and Applications</li>
+                  <li>Data Center Design</li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="https://github.com/A0L0XIIV/McMaster_Grad_Projects" target="_blank" rel="noopener noreferrer">Ders Projelerim [GitHub]</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/A0L0XIIV/COMPSCI-6WW3-Projects" target="_blank" rel="noopener noreferrer">Web Projelerim [GitHub]</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/aforesi/CS6WW3_RealEstateValuator" target="_blank" rel="noopener noreferrer">Grup Projemiz [GitHub]</a>
+                  </li>
+                </ul>
+              </div>
+              <div 
+                id="meng-project"
+                class="expandable-education-section">
+                <h4>Astah GSN için Eclipse Epsilon Framework sürücüsü</h4>
+                <ul>
+                  <li>
+                    <span style="font-style:italic; text-decoration: underline;">Danışman:</span> 
+                    Dr. Richard Paige [paigeri@mcmaster.ca]
+                    <a href = "mailto:paigeri@mcmaster.ca" style="font-size: 1em;">E-posta gönder</a>
+                  </li>
+                  <li>
+                    <span style="font-style: italic; text-decoration: underline;">Amaç:</span>
+                    Astah GSN modellerini Epsilon ile yönetebilmek/kontrol edebilmek.
+                  </li>
+                  <li>Bu proje Model-Driven Engineering (MDE) teknikleri ile geliştirildi.</li>
+                  <li>Goal Structuring Notation (GSN) güvenlik-kritik sistemlerde kullanılır.</li>
+                  <li>Astah GSN, ticari bir GSN modeli oluşturma aracıdır.</li>
+                  <li>Epsilon, Eclipse tarafından geliştirilen model yönetim sistemidir.</li>
+                  <li>Epsilon Java dili ile geliştirildiği için sürücü de Java ile geliştirildi.</li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="https://github.com/A0L0XIIV/Eclipse-Epsilon-Astah-GSN-Driver" target="_blank" rel="noopener noreferrer">Master Projem [GitHub]</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/A0L0XIIV/Eclipse-Epsilon-Astah-GSN-Driver/blob/master/Project%20Report/BaranKaya_ProjectReport.pdf" target="_blank" rel="noopener noreferrer">Proje Raporum</a>
+                  </li>
+                </ul>
+              </div>
+              <div 
+                id="mcmaster-links"
+                class="expandable-education-section">
+                <a href="http://mcmaster.ca" target="_blank" rel="noopener noreferrer">McMaster University Websitesi</a>
+                <br>
+                <a href="https://www.eng.mcmaster.ca/cas" target="_blank" rel="noopener noreferrer">McMaster - Computing and Software bölümü</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-1 py-3"></div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- Image Carousel (Bootstrap) -->
+            <div
+              id="gradImageCarousel"
+              class="carousel slide carousel-fade"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li data-target="#gradImageCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#gradImageCarousel" data-slide-to="1"></li>
+                <li data-target="#gradImageCarousel" data-slide-to="2"></li>
+                <li data-target="#gradImageCarousel" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div
+                  class="carousel-item active"
+                  data-toggle="modal"
+                  data-target="#gradImageModal"
+                >
+                  <a href="#gradImageModalCarousel" data-slide-to="0">
+                    <img
+                      src="{% static 'images/mcmaster_1.jpg' %}"
+                      loading="lazy"
+                      alt="McMaster University Image 1"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#gradImageModal"
+                >
+                  <a href="#gradImageModalCarousel" data-slide-to="1">
+                    <img
+                      src="{% static 'images/mcmaster_2.jpg' %}"
+                      loading="lazy"
+                      alt="McMaster University Image 2"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#gradImageModal"
+                >
+                  <a href="#gradImageModalCarousel" data-slide-to="2">
+                    <img
+                      src="{% static 'images/mcmaster_3.jpg' %}"
+                      loading="lazy"
+                      alt="McMaster ITB Image"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#gradImageModal"
+                >
+                  <a href="#gradImageModalCarousel" data-slide-to="3">
+                    <img
+                      src="{% static 'images/hamilton_1.jpg' %}"
+                      loading="lazy"
+                      alt="Hamilton Image"
+                    />
+                  </a>
+                </div>
+              </div>
+              <!-- Slider for next and previos images -->
+              <a
+                class="carousel-control-prev"
+                href="#gradImageCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only"></span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#gradImageCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Sonraki</span>
+              </a>
+            </div>
+
+            <!-- Image Carousel Modal (PopUp) (Bootstrap) -->
+            <div class="modal fade" id="gradImageModal">
+              <!-- Modal size Extra Large for bigger images -->
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="gradName">Yüksek Lisans Fotoğraflarım</div>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      title="Close"
+                    >
+                      <i class="fa fa-window-close" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <!-- Without modal body, modal doesn't have any white edges. -->
+                  <div class="modal-body">
+                    <!-- Image Carousel -->
+                    <div
+                      id="gradImageModalCarousel"
+                      class="carousel slide"
+                      data-interval="false"
+                    >
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/mcmaster_1.jpg' %}"
+                            loading="lazy"
+                            alt="McMaster University Image 1"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/mcmaster_2.jpg' %}"
+                            loading="lazy"
+                            alt="McMaster University Image 2"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/mcmaster_3.jpg' %}"
+                            loading="lazy"
+                            alt="McMaster ITB Image"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                      <div class="carousel-item">
+                        <img
+                          class="d-block w-100"
+                          src="{% static 'images/hamilton_1.jpg' %}"
+                          loading="lazy"
+                          alt="Hamilton Image"
+                        />
+                        <div class="carousel-caption"></div>
+                      </div>
+                    </div>
+                      <!-- Slider for next and previos images -->
+                      <a
+                        class="carousel-control-prev"
+                        href="#gradImageModalCarousel"
+                        role="button"
+                        data-slide="prev"
+                      >
+                        <span
+                          class="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="sr-only"></span>
+                      </a>
+                      <a
+                        class="carousel-control-next"
+                        href="#gradImageModalCarousel"
+                        role="button"
+                        data-slide="next"
+                      >
+                        <span
+                          class="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="sr-only">Sonraki</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of image-->
+          </div>
+        </div>
+      </div>
+
+      <div id="4">
+        <h3 class="section">Lisans Derecesi</h3>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <!-- Image Carousel (Bootstrap) -->
+            <div
+              id="undergradImageCarousel"
+              class="carousel slide carousel-fade"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li data-target="#undergradImageCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#undergradImageCarousel" data-slide-to="1"></li>
+                <li data-target="#undergradImageCarousel" data-slide-to="2"></li>
+                <li data-target="#undergradImageCarousel" data-slide-to="3"></li>
+                <li data-target="#undergradImageCarousel" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div
+                  class="carousel-item active"
+                  data-toggle="modal"
+                  data-target="#undergradImageModal"
+                >
+                  <a href="#undergradImageModalCarousel" data-slide-to="0">
+                    <img
+                      src="{% static 'images/itu_1.webp' %}"
+                      loading="lazy"
+                      alt="Istanbul Technical University Image"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#undergradImageModal"
+                >
+                  <a href="#undergradImageModalCarousel" data-slide-to="1">
+                    <img
+                      src="{% static 'images/itu_2.png' %}"
+                      loading="lazy"
+                      alt="Istanbul Technical University Logo"
+                      style="height: 600px !important; width: auto !important; margin: auto; background-color: #ddd;"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#undergradImageModal"
+                >
+                  <a href="#undergradImageModalCarousel" data-slide-to="2">
+                    <img
+                      src="{% static 'images/itu_4.jpg' %}"
+                      loading="lazy"
+                      alt="Istanbul Technical University Main Gate"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#undergradImageModal"
+                >
+                  <a href="#undergradImageModalCarousel" data-slide-to="3">
+                    <img
+                      src="{% static 'images/itu_graduation_1.jpg' %}"
+                      loading="lazy"
+                      alt="Baran's Graduation Image 1"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#undergradImageModal"
+                >
+                  <a href="#undergradImageModalCarousel" data-slide-to="4">
+                    <img
+                      src="{% static 'images/itu_graduation_2.jpg' %}"
+                      loading="lazy"
+                      alt="Baran's Graduation Image 2"
+                    />
+                  </a>
+                </div>
+              </div>
+              <!-- Slider for next and previos images -->
+              <a
+                class="carousel-control-prev"
+                href="#undergradImageCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only"></span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#undergradImageCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Sonraki</span>
+              </a>
+            </div>
+
+            <!-- Image Carousel Modal (PopUp) (Bootstrap) -->
+            <div class="modal fade" id="undergradImageModal">
+              <!-- Modal size Extra Large for bigger images -->
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="bkName">Lisans Fotoğraflarım</div>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      title="Close"
+                    >
+                      <i class="fa fa-window-close" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <!-- Without modal body, modal doesn't have any white edges. -->
+                  <div class="modal-body">
+                    <!-- Image Carousel -->
+                    <div
+                      id="undergradImageModalCarousel"
+                      class="carousel slide"
+                      data-interval="false"
+                    >
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/itu_1.webp' %}"
+                            loading="lazy"
+                            alt="Istanbul Technical University Image"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/itu_2.png' %}"
+                            loading="lazy"
+                            alt="Istanbul Technical University Logo"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/itu_4.jpg' %}"
+                            loading="lazy"
+                            alt="Istanbul Technical University Main Gate"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <img
+                              class="d-block w-100"
+                              src="{% static 'images/itu_graduation_1.jpg' %}"
+                              loading="lazy"
+                              alt="Baran's Graduation Image 1"
+                            />
+                            <div class="carousel-caption"></div>
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              class="d-block w-100"
+                              src="{% static 'images/itu_graduation_2.jpg' %}"
+                              loading="lazy"
+                              alt="Baran's Graduation Image 2"
+                            />
+                            <div class="carousel-caption"></div>
+                          </div>
+                      </div>
+                      <!-- Slider for next and previos images -->
+                      <a
+                        class="carousel-control-prev"
+                        href="#undergradImageModalCarousel"
+                        role="button"
+                        data-slide="prev"
+                      >
+                        <span
+                          class="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="sr-only"></span>
+                      </a>
+                      <a
+                        class="carousel-control-next"
+                        href="#undergradImageModalCarousel"
+                        role="button"
+                        data-slide="next"
+                      >
+                        <span
+                          class="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="sr-only">Sonraki</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of image-->
+          </div>
+          <div class="col-1 py-3"></div>
+          <div class="col-xs-12 col-sm-5">
+            <p>
+              İstanbul Teknik Üniversitesi'nde 5 yıl okudum. İlk yılım İngilizce hazırlık okuyarak geçti. Ardından 4 yıl Bilgisayar Mühendisliği eğitimi aldım. Kolay bir yolculuk değildi fakat İTÜ'den mezun olduğum için mutluyum. İlk dönemlerde zamanımın çoğunu matematik, fizik, kimya, Türkçe ve tarih gibi genel mühendislik derslerinde geçiridim. Daha sonra bölüme özel dersler başladı ve onlardan havuz derslerine nazaran daha çok keyif alarak okudum. Türkiye'de Bilgisayar Mühendisliği bölümleri yurtdışındaki gibi değil. Örneğin Kanada'da Bilgisayar Mühendisliği (Computer Engineering) ve Bilgisayar Bilimi (Computer Science) diye 2 ayrı bölüm mevcut. Türkiye'deki Bilgisayar Mühendisliği bölümleri bu ikisinin arasında bir yerde yer alıyor. Dolayısıyla ben Bilgisayar Mimarisi (Computer Architecture) gibi donanım derslerini alırken aynı zamanda Formal Methodlar ve Automata gibi teori derslerini de aldım. Aldığım derslere, mezuniyet projesine, İTÜ ve bölüm web sitelerine butonlarından ulaşabilirsiniz.
+            </p>
+            <div class="mx-auto text-center">
+              <button 
+                class="btn btn-sm bg-courses" 
+                onclick="$('#undergraduate-courses').toggle();$('#graduation-project').hide();$('#itu-links').hide();">
+                Dersler
+              </button>
+              <button 
+                class="btn btn-sm bg-project" 
+                onclick="$('#undergraduate-courses').hide();$('#graduation-project').toggle();$('#itu-links').hide();">
+                Bitirme Projem
+              </button>
+              <button 
+                class="btn btn-sm bg-links" 
+                onclick="$('#graduation-project').hide();$('#undergraduate-courses').hide();$('#itu-links').toggle();">
+                İTÜ Websiteleri
+              </button>
+              <button 
+                class="btn btn-sm bg-close" 
+                onclick="$('#undergraduate-courses').hide();$('#graduation-project').hide();$('#itu-links').hide();">
+                <i class="fa fa-window-close text-white" aria-hidden="true"></i>
+              </button>
+              <div 
+                id="undergraduate-courses"
+                class="expandable-education-section">
+                <ul>
+                  <li>Introduction to Scientific and Engineering Computing (C)</li>
+                  <li>Linear Algebra and Applications</li>
+                  <li>Discrete Mathematics</li>
+                  <li>Digital Circuits</li>
+                  <li>Numerical Methods in Computer Engineering</li>
+                  <li>Computer Organization</li>
+                  <li>Formal Languages and Automata</li>
+                  <li>Microprocessor Systems</li>
+                  <li>Data Structures</li>
+                  <li>Object Oriented Programming</li>
+                  <li>Computer Operating Systems</li>
+                  <li>Signal and System for Computer Engineering</li>
+                  <li>Analysis of Algirityhms I and II</li>
+                  <li>Database Management Systems</li>
+                  <li>Software & System Engineering</li>
+                  <li>Real-Time Systems Software</li>
+                  <li>Software Quality and Testing</li>
+                  <li>Computer Communications</li>
+                  <li>Learning From Data</li>
+                  <li>Functional Programming</li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="https://github.com/A0L0XIIV/ITU_Undergrad_Projects" target="_blank" rel="noopener noreferrer">Ders Projelerim [GitHub]</a>
+                  </li>
+                </ul>
+              </div>
+              <div 
+                id="graduation-project"
+                class="expandable-education-section">
+                <h4>Yapı Kredi için geliştirilen Şirket İlişkileri Çıkarma Projesi</h4>
+                <ul>
+                  <li>
+                    <span style="font-style:italic; text-decoration: underline;">Danışman:</span> 
+                    Doç. Prof. Dr. Gülşen Cebiroğlu Eryiğit [gulsenc@itu.edu.tr]
+                    <a href = "mailto:gulsenc@itu.edu.tr" style="font-size: 1em;">E-posta gönder</a></li>
+                  <li>
+                    <span style="font-style:italic; text-decoration: underline;">Amaç:</span> 
+                    Şirket ilişkilerini haber web sitelerinden elde etmek.</li>
+                  <li>
+                    <span style="font-style:italic; text-decoration: underline;">Teknikler:</span> 
+                    Doğal Dil İşleme (NLP) & Makine Öğrenmesi (ML)</li>
+                  <li>Python Scrapy kütüphanesi ile web kazıma scripti geliştirildi.</li>
+                  <li>CRF++ kütüphanesi şirket isimlerini bulmak ve etiketlemek için kullanıldı.</li>
+                  <li>LibSVM kütüphanesi şirketler arası ilişkileri bulmak için kullanıldı.</li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="https://github.com/A0L0XIIV/ITU_Undergrad_Projects/tree/master/BLG%20492%20(Graduation%20Project)/Codes" target="_blank" rel="noopener noreferrer">Bitirme Projem [GitHub]</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/A0L0XIIV/ITU_Undergrad_Projects/blob/master/BLG%20492%20(Graduation%20Project)/Reports/Interim_Report.pdf" target="_blank" rel="noopener noreferrer">Ara Rapor</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/A0L0XIIV/ITU_Undergrad_Projects/blob/master/BLG%20492%20(Graduation%20Project)/Reports/Final_Project_Report.pdf" target="_blank" rel="noopener noreferrer">Proje Raporu</a>
+                  </li>
+                </ul>
+              </div>
+              <div 
+                id="itu-links"
+                class="expandable-education-section">
+                <a href="http://www.itu.edu.tr/" target="_blank" rel="noopener noreferrer">İstanbul Teknik Üniversitesi Websitesi</a>
+                <br>
+                <a href="http://www.cs.itu.edu.tr/" target="_blank" rel="noopener noreferrer">İTÜ - Bilgisayar ve Bilişim Fakültesi</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="5">
+        <h3 class="section">Projelerim</h3>
+        <ul class="text-center">
+          <li>
+            <span style="font-weight: bold;">Kodlama Hesaplarım:</span>
+          </li>
+          <li>
+            <a href="https://github.com/A0L0XIIV" target="_blank" rel="noopener noreferrer">
+              GitHub Hesabım
+            </a>
+          </li>
+          <li>
+            <a href="https://leetcode.com/A0L0XIIV" target="_blank" rel="noopener noreferrer">
+              LeetCode Hesabım
+            </a>
+          </li>
+          <li>
+            <a href="https://www.hackerrank.com/brnky" target="_blank" rel="noopener noreferrer">
+              HackerRank Hesabım
+            </a>
+          </li>
+          <br>
+          <li>
+            <span style="font-weight: bold;">Web projelerim:</span>
+          </li>
+          <li>
+            <a href="./journal-mockup/index.php" target="_blank" rel="noopener noreferrer">
+              Web Günlük mockup
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/A0L0XIIV/web_journal" target="_blank" rel="noopener noreferrer">
+              Web Günlük [GitHub] (PHP, JS, HTML&CSS)
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/A0L0XIIV/kayabaran-index-page" target="_blank" rel="noopener noreferrer">
+              kayabaran.com sayfası [GitHub] (JS, HTML&CSS)
+            </a>
+          </li>
+          <li>
+            <a href="./ParkRater/PHP/index.php" target="_blank" rel="noopener noreferrer">
+              ParkRater - McMaster University: CompSci 6WW3 course projem (PHP, JS, HTML&CSS)
+            </a>
+          </li>
+          <br>
+          <li>
+            <span style="font-weight: bold;">Unreal Engine 4 C++ oyun projelerim:</span>
+          </li>
+          <li>
+            <a href="https://github.com/A0L0XIIV/UnrealDemo-TPShooter" target="_blank" rel="noopener noreferrer">
+              Third Person Shooter oyun projem
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/A0L0XIIV/UnrealDemo-ToonTanks" target="_blank" rel="noopener noreferrer">
+              Toon Tanks oyun projem
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/A0L0XIIV/UnrealDemo-BuildingEscape" target="_blank" rel="noopener noreferrer">
+              Build Escape, ilk UE4 oyun projem
+            </a>
+          </li>
+          <br>
+          <li>
+            <span style="font-weight: bold;">Diğer projelerim:</span>
+          </li>
+          <li>
+            <a href="https://github.com/A0L0XIIV/Interview_Questions" target="_blank" rel="noopener noreferrer">
+              Bazı teknik mülakat soruları ve çözümleri (C++)
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/A0L0XIIV/Cpp-Socket" target="_blank" rel="noopener noreferrer">
+              C++ mesajlaşma programı, server-clients ve multithreading
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/A0L0XIIV/Tic-Tac-Toe" target="_blank" rel="noopener noreferrer">
+              ASCII Tic-Tac-Toe (C++) [Neden olmasın!]
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/A0L0XIIV/Decimal-Roman-Number" target="_blank" rel="noopener noreferrer">
+              Rakam-Roma sayısı çevirici (C++)
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/A0L0XIIV/RandomPasswordGenerator" target="_blank" rel="noopener noreferrer">
+              Rastgele şifre oluşturucu (C++)
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/A0L0XIIV/PythonSocket" target="_blank" rel="noopener noreferrer">
+              Python Soket (Python)
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="6">
+        <h3 class="section">Memleket</h3>
+        <div class="row">
+          <div class="col-xs-12 col-sm-5">
+            <p class="vertical-centered">
+              Eskişehir benim memleketim ve Türkiye'nin en güzel şehirlerinden biri. Öğrencei şehri olarak bilinen Eskişehir'de 3 adet üniversite bulunmakta. Türkiye'nin en çok ziyaret edilen şehirlerinden biri olan Eskişehir'in nüfusu yaklaşık 900.000 ve her geçen gün artmakta.
+            </p>
+          </div>
+          <div class="col-1 py-3"></div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- Image Carousel (Bootstrap) -->
+            <div
+              id="hometownImageCarousel"
+              class="carousel slide carousel-fade"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li data-target="#hometownImageCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#hometownImageCarousel" data-slide-to="1"></li>
+                <li data-target="#hometownImageCarousel" data-slide-to="2"></li>
+                <li data-target="#hometownImageCarousel" data-slide-to="3"></li>
+                <li data-target="#hometownImageCarousel" data-slide-to="4"></li>
+                <li data-target="#hometownImageCarousel" data-slide-to="5"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div
+                  class="carousel-item active"
+                  data-toggle="modal"
+                  data-target="#hometownImageModal"
+                >
+                  <a href="#hometownImageModalCarousel" data-slide-to="0">
+                    <img
+                      src="{% static 'images/eskisehir_1.jpg' %}"
+                      loading="lazy"
+                      alt="Eskisehir Image 1"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#hometownImageModal"
+                >
+                  <a href="#hometownImageModalCarousel" data-slide-to="1">
+                    <img
+                      src="{% static 'images/eskisehir_2.jpg' %}"
+                      loading="lazy"
+                      alt="Eskisehir Image 2"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#hometownImageModal"
+                >
+                  <a href="#hometownImageModalCarousel" data-slide-to="2">
+                    <img
+                      src="{% static 'images/eskisehir_3.jpg' %}"
+                      loading="lazy"
+                      alt="Eskisehir Sazova Park Image"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#hometownImageModal"
+                >
+                  <a href="#hometownImageModalCarousel" data-slide-to="3">
+                    <img
+                      src="{% static 'images/eskisehir_4.jpg' %}"
+                      loading="lazy"
+                      alt="Eskisehir Image 4"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#hometownImageModal"
+                >
+                  <a href="#hometownImageModalCarousel" data-slide-to="4">
+                    <img
+                      src="{% static 'images/eskisehir_5.jpg' %}"
+                      loading="lazy"
+                      alt="Eskisehir Yazilikaya Image"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="carousel-item"
+                  data-toggle="modal"
+                  data-target="#hometownImageModal"
+                >
+                  <a href="#hometownImageModalCarousel" data-slide-to="5">
+                    <img
+                      src="{% static 'images/eskisehir_6.jpg' %}"
+                      loading="lazy"
+                      alt="Eskisehir Map Image"
+                    />
+                  </a>
+                </div>
+              </div>
+              <!-- Slider for next and previos images -->
+              <a
+                class="carousel-control-prev"
+                href="#hometownImageCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only"></span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#hometownImageCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Sonraki</span>
+              </a>
+            </div>
+
+            <!-- Image Carousel Modal (PopUp) (Bootstrap) -->
+            <div class="modal fade" id="hometownImageModal">
+              <!-- Modal size Extra Large for bigger images -->
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="cityName">Eskişehir Fotoğrafları</div>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      title="Close"
+                    >
+                      <i class="fa fa-window-close" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <!-- Without modal body, modal doesn't have any white edges. -->
+                  <div class="modal-body">
+                    <!-- Image Carousel -->
+                    <div
+                      id="hometownImageModalCarousel"
+                      class="carousel slide"
+                      data-interval="false"
+                    >
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/eskisehir_1.jpg' %}"
+                            loading="lazy"
+                            alt="Eskisehir Image 1"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/eskisehir_2.jpg' %}"
+                            loading="lazy"
+                            alt="Eskisehir Image 2"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            class="d-block w-100"
+                            src="{% static 'images/eskisehir_3.jpg' %}"
+                            loading="lazy"
+                            alt="Eskisehir Sazova Park Image"
+                          />
+                          <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <img
+                              class="d-block w-100"
+                              src="{% static 'images/eskisehir_4.jpg' %}"
+                              loading="lazy"
+                              alt="Eskisehir Image 4"
+                            />
+                            <div class="carousel-caption"></div>
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              class="d-block w-100"
+                              src="{% static 'images/eskisehir_5.jpg' %}"
+                              loading="lazy"
+                              alt="Eskisehir Yazilikaya Image"
+                            />
+                            <div class="carousel-caption"></div>
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              class="d-block w-100"
+                              src="{% static 'images/eskisehir_6.jpg' %}"
+                              loading="lazy"
+                              alt="Eskisehir Map Image"
+                            />
+                            <div class="carousel-caption"></div>
+                          </div>
+                      </div>
+                      <!-- Slider for next and previos images -->
+                      <a
+                        class="carousel-control-prev"
+                        href="#hometownImageModalCarousel"
+                        role="button"
+                        data-slide="prev"
+                      >
+                        <span
+                          class="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="sr-only"></span>
+                      </a>
+                      <a
+                        class="carousel-control-next"
+                        href="#hometownImageModalCarousel"
+                        role="button"
+                        data-slide="next"
+                      >
+                        <span
+                          class="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="sr-only">Sonraki</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of image-->
+          </div>
+        </div>
+      </div>
+
+      <div id="7">
+        <h3 class="section">Hobilerim</h3>
+        <p class="text-center">
+          Bilgisayar oyunlarını seviyorum ve onlar benim en sevdiğim hobim. Diğer mühendislik dereceleri yerine Bilgisayar Mühendisliği derecesi seçmemin nedeni onlar. Yazılım mühendisi olarak video oyun yazılımı üzerinde çalışmak istiyorum ve bu yüzden C ++ öğrenmek ve kullanmak istiyorum. Onun dışında arabaları ve bilimkurgu kitaplarını ve filmlerini/dizilerini seviyorum.
+        </p>
+      </div>
+    </main>
+    <footer class="text-center mx-auto">
+      <ul>
+        <li>
+          <a href = "mailto:brnky_95+kayabaran@hotmail.com">E-posta irtibat</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/kayabaran" target="_blank" rel="noopener noreferrer">LinkedIn Hesabım</a>
+        </li>
+        <li>
+          <a href="https://www.github.com/A0L0XIIV" target="_blank" rel="noopener noreferrer">GitHub Hesabım</a>
+        </li>
+        <li>
+          <a href="https://leetcode.com/A0L0XIIV" target="_blank" rel="noopener noreferrer">LeetCode Hesabım</a>
+        </li>
+        <li>
+          <a href="https://www.hackerrank.com/brnky" target="_blank" rel="noopener noreferrer">HackerRank Hesabım</a>
+        </li>
+      </ul>
+      <br>
+      <span>&copy; kayabaran.com, Baran Kaya, 2021</span>
+    </footer>
+  </body>
+</html>

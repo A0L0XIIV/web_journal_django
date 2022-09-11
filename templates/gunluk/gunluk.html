@@ -1,0 +1,20 @@
+{% extends 'gunluk/base.html' %}
+
+{% block title %}
+Hoşgeldin {{ user.username }}!
+{% endblock %}
+
+{% block content %}
+  {% if User.is_authenticated %}
+
+  <!-- Centered main-->
+  <main class="main" style="height: 90vh;">
+    YES
+  </main>
+
+  {% else %}
+    <p>You are not logged in</p>
+    <!-- TODO -->
+    <!-- <a href=" {% url '/gunluk/login.html' % }">Log In</a> -->
+  {% endif %}
+{% endblock %}

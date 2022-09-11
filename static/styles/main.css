@@ -1,0 +1,610 @@
+/* --- Define color variables --- */
+:root {
+  --primary-color: #ff7b00;
+  --secondary-color: #715;
+  --primary-text: #222;
+  --write: #0050ff;
+  --edit: #20cdee;
+  --show: #159030;
+  --graph: #ffc107;
+  --password: #ff6507;
+  --logout: #bb1010;
+  --login: #33e0b0;
+  --game: #2bc500;
+  --series: #5da2d8;
+  --movie: #ff599a;
+  --book: #f7ee43;
+}
+
+.bg-write {
+  background-color: var(--write) !important;
+  color: #fff !important;
+}
+.bg-edit {
+  background-color: var(--edit) !important;
+  color: var(--primary-text) !important;
+}
+.bg-show {
+  background-color: var(--show) !important;
+  color: #000 !important;
+}
+.bg-graph {
+  background-color: var(--graph) !important;
+  color: var(--primary-text) !important;
+}
+.bg-password {
+  background-color: var(--password) !important;
+  color: var(--primary-text) !important;
+}
+.bg-logout {
+  background-color: var(--logout) !important;
+  color: #fff !important;
+}
+.bg-login {
+  background-color: var(--login) !important;
+  color: var(--primary-text) !important;
+}
+.bg-game {
+  background-color: var(--game) !important;
+  color: var(--primary-text) !important;
+}
+.bg-series {
+  background-color: var(--series) !important;
+  color: var(--primary-text) !important;
+}
+.bg-movie {
+  background-color: var(--movie) !important;
+  color: var(--primary-text) !important;
+}
+.bg-book {
+  background-color: var(--book) !important;
+  color: var(--primary-text) !important;
+}
+/* --- Define color variables --- */
+
+/* --- HTML tags --- */
+/*Body sizes, font decorations, background image*/
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: Trebuchet MS, sans-serif;
+  background: rgba(200, 200, 200, 0.3);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/*Header background image and sizes*/
+header {
+  background: var(--primary-color);
+  margin: 0;
+}
+
+/*Footer colors and size*/
+footer {
+  background: var(--primary-color);
+  color: var(--primary-text);
+  text-align: center;
+  padding: 0.5%;
+  clear: both;
+  width: 100%;
+}
+
+/*Link decoration: no underline*/
+a {
+  text-decoration: none;
+}
+
+/*Hide meta tags*/
+meta {
+  display: none;
+}
+
+/*Hide UL bullets*/
+ul {
+  list-style-type: none;
+}
+
+/*Rounded buttons*/
+button {
+  border-radius: 8px;
+}
+/* --- HTML tags --- */
+
+/* --- Inputs --- */
+/*Input font decoration and sizes*/
+
+input:invalid {
+  background-color: #ffcccc;
+}
+
+input[type="number"]:valid,
+input[type="text"]:valid {
+  border-color: var(--login);
+}
+
+input:required {
+  border-color: var(--primary-color);
+  border-width: 0.5em;
+}
+
+textarea {
+  text-align: justify;
+  width: 80%;
+}
+/* --- Inputs --- */
+
+/* --- Select-option --- */
+/*Select decorated like input tags*/
+.custom-select {
+  width: 25vw;
+  font-size: 1.2vw;
+}
+
+select {
+  font-family: "Font Awesome 5 Free", "Trebuchet MS, sans-serif";
+  text-align: center;
+  text-align-last: center;
+  -moz-text-align-last: center;
+}
+/* Makes all selects first elements green
+* CSS doesn't have choose with text
+* JS requires too much because select2 
+* genereates new HTML at the end of the page
+* when user clicks the select 
+.select2-results__options li:nth-child(1){
+  color: #0b7;
+  font-weight: bold;
+}
+*/
+
+/*On hover: change text color to black*/
+select:hover {
+  color: #000;
+}
+
+.opt10 {
+  color: #0f7;
+}
+
+.opt9 {
+  color: #0f0;
+}
+
+.opt8 {
+  color: #3f0;
+}
+
+.opt7 {
+  color: #7f0;
+}
+
+.opt6 {
+  color: #bf0;
+}
+
+.opt5 {
+  color: #ff0;
+}
+
+.opt4 {
+  color: #fb0;
+}
+
+.opt3 {
+  color: #f70;
+}
+
+.opt2 {
+  color: #f30;
+}
+
+.opt1 {
+  color: #f00;
+}
+
+.opt0 {
+  color: #f07;
+}
+/* --- Select-option --- */
+
+/* --- Main  --- */
+/*Main tag: centered and width adjustment*/
+.main {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  background: #fff;
+}
+/* --- Main  --- */
+
+/* --- Name --- */
+/*Site name centered*/
+#websiteName {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 3px 3px rgb(54, 40, 0);
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/*Site name links to index color change*/
+#websiteName:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 3px #000;
+}
+
+#websiteName:hover img {
+  border-radius: 1em;
+  box-shadow: 0 0 3px #000;
+  opacity: 0.5;
+}
+
+/* --- Name  --- */
+
+/* --- Buttons  --- */
+/* Custom button */
+button {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: none;
+  border-radius: 5em;
+  background-color: var(--primary-color);
+  color: var(--primary-text);
+  position: relative;
+  overflow: hidden !important;
+}
+
+button a {
+  text-decoration: none !important;
+  color: var(--primary-text);
+}
+
+button:hover a {
+  text-decoration: none !important;
+  background-color: rgba(currentColor, 0.2) !important;
+}
+
+/* Navigation bar button */
+.nav-btn {
+  border: none;
+  background-color: rgba(123, 0, 255, 0.1); /* Slightly show buttons */
+  height: 5vh !important;
+  color: var(--primary-text);
+  font-weight: bolder;
+  font-size: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Submit button */
+.sbmt-btn {
+  font-weight: bold;
+}
+
+/* Entertainment button */
+.ent-btn {
+  border-radius: 0 0.75em 0 0.75rem;
+}
+/* --- Buttons  --- */
+
+/* --- Entertainment List Items  --- */
+.entertainment-list {
+  display: inline-block;
+}
+
+.entertainment-list-item {
+  width: 16vh;
+  float: left;
+  margin: 1em 0.3em !important;
+  border-radius: 8px;
+  box-shadow: -5px 10px 15px rgb(0 0 0 / 50%);
+}
+
+.entertainment-list-item:hover {
+  box-shadow: -8px 13px 15px rgb(0 0 0 / 50%);
+  transform: scale(1.05);
+}
+
+.entertainment-list-item:hover img {
+  transform: scale(1.01);
+}
+
+.entertainment-card-image {
+  width: calc(16vh - 2px);
+  height: 20vh;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.entertainment-card-body {
+  padding: 0;
+}
+
+.entertainment-card-title {
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-shadow: 0 2px 3px #fff;
+}
+
+.entertainment-card-text {
+  margin: 0;
+  text-shadow: 0 2px 5px #ddd;
+}
+
+.entertainment-card-remove-btn {
+  position: absolute;
+  top: -2%;
+  right: -8%;
+  width: fit-content;
+  padding: 0;
+  font-size: 20px;
+  color: #fff !important;
+}
+/* --- Entertainment List Items  --- */
+
+/* --- Error and success styles  --- */
+.error,
+.success {
+  font-size: 1em;
+  color: var(--primary-text);
+  margin: auto;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: fit-content;
+  text-align: center;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px 2px var(--logout);
+  border-radius: 0.5em;
+  text-shadow: -1px 1px 0 var(--logout), 1px 1px 0 var(--logout),
+    1px -1px 0 var(--logout), -1px -1px 0 var(--logout);
+}
+
+.success {
+  font-size: 0.8em;
+  box-shadow: 0 0 10px 2px var(--login);
+  text-shadow: -1px 1px 0 var(--login), 1px 1px 0 var(--login),
+    1px -1px 0 var(--login), -1px -1px 0 var(--login);
+}
+
+.orange-text {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+/* --- Error and success styles  --- */
+
+/* --- Text selection color  --- */
+::-moz-selection {
+  color: #fff !important;
+  background: var(--primary-color) !important;
+}
+
+::selection {
+  color: #fff !important;
+  background: var(--primary-color) !important;
+}
+/* --- Text selection color  --- */
+
+/* --- Loading...  --- */
+#loader-icon {
+  border: 10px solid var(--primary-color);
+  border-top: 10px solid var(--secondary-color);
+  border-bottom: 10px solid var(--secondary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* --- Loading...  --- */
+
+/* --- Dark Theme  --- */
+/*Dark Theme Body*/
+.dark-body {
+  background: #111;
+}
+
+/*Dark Theme Main*/
+.dark-main {
+  background: #222;
+  color: #fff;
+}
+
+/*Dark Card*/
+.dark-card {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-card-header {
+  border-bottom: 1px solid #333;
+}
+
+.dark-card-footer {
+  border-top: 1px solid #333;
+}
+
+/*Dark Theme Inputs*/
+.dark-input,
+.dark-textarea,
+.dark-select {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+.dark-input:invalid {
+  background-color: #944;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111;
+    min-width: 100%;
+  }
+
+  main,
+  .modal-content {
+    background: #222 !important;
+    color: #fff;
+  }
+
+  .card {
+    background: #222;
+    color: #fff;
+    border: 1px solid #555;
+  }
+
+  .card-header {
+    border-bottom: 1px solid #333;
+  }
+
+  .card-footer {
+    border-top: 1px solid #333;
+  }
+
+  .table {
+    background-color: #333;
+    color: #fff;
+  }
+
+  input,
+  select,
+  textarea {
+    background-color: #333 !important;
+    color: #fff !important;
+  }
+
+  input:invalid {
+    background-color: #944;
+  }
+
+  #dark-theme-selection {
+    visibility: hidden;
+  }
+
+  .select2-results,
+  .select2-dropdown,
+  .select2-selection,
+  .select2-selection__rendered {
+    background-color: #333 !important;
+    color: #fff !important;
+  }
+}
+/* --- Dark Theme  --- */
+
+/* ----- SCREEN SIZE BASED OPERATIONS  ----- */
+
+/* Mobile Devices */
+@media only screen and (max-width: 575px) {
+  body {
+    font-size: 1rem;
+    background: #fff;
+    max-width: 100% !important;
+  }
+
+  .main {
+    /*Use all screen space width*/
+    width: 100%;
+  }
+
+  /*Site name font size adjustment*/
+  #websiteName a {
+    font-size: 1.5em;
+  }
+
+  /*Input and select tags font and box sizes*/
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="file"],
+  input[type="search"],
+  select {
+    width: 20rem !important;
+    height: 2.4rem !important;
+    font-size: 1.2rem !important;
+  }
+
+  /*Checkbox and radio sizes*/
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 5rem !important;
+    height: auto !important;
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+  body {
+    font-size: 1rem;
+    background: #fff;
+  }
+
+  .main {
+    /*Use all screen space width*/
+    width: 100%;
+  }
+
+  /*Input and select tags font and box sizes*/
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="file"],
+  input[type="search"],
+  select {
+    width: 20rem !important;
+    height: 2rem !important;
+    font-size: 1.2rem !important;
+  }
+
+  /*Checkbox and radio sizes*/
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 10rem !important;
+    height: auto !important;
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Lower Res Desktop - HD*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  .main {
+    /*Little bit background image*/
+    width: 90%;
+  }
+}
+
+/* High Res Desktop - FullHD+*/
+@media only screen and (min-width: 1200px) {
+}
