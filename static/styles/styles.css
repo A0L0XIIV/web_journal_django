@@ -1,3 +1,14 @@
+/* Size stylesheets */
+@import './size/mobile.css';
+@import './size/tablet.css';
+@import './size/low-res.css';
+@import './size/high-res.css';
+/* Theme stylesheets */
+@import './theme/dark.css';
+/* Colour stylesheets */
+@import './color.css';
+
+
 /* ----- HTML Tags  ----- */
 body {
   background-color: #fff;
@@ -9,6 +20,7 @@ body {
 main {
   width: 80%;
   margin: auto;
+  padding: 2%;
   color: #000;
   text-align: center;
 }
@@ -23,6 +35,14 @@ h3 {
 
 ul {
   list-style: none;
+  padding: 0;
+}
+
+.project-list > li {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 a {
@@ -40,7 +60,6 @@ footer {
   background-color: #343a40;
   color: #fff;
   padding: 1em;
-  margin-top: 3em;
 }
 
 footer > ul > li > a {
@@ -56,7 +75,7 @@ footer > ul > li > a {
   overflow: hidden !important;
   image-orientation: from-image;
   width: 900px;
-  height: 600px;
+  height: 500px;
   object-fit: cover;
 }
 
@@ -67,9 +86,10 @@ footer > ul > li > a {
 
 .carousel,
 .carousel-inner {
+  border-radius: 8px;
   max-width: 900px;
-  max-height: 600px !important;
-  min-height: 600px !important;
+  max-height: 500px !important;
+  min-height: 500px !important;
   background-color: #000;
 }
 
@@ -84,29 +104,30 @@ footer > ul > li > a {
   min-height: 100% !important;
 }
 
-/* ----- Section Titles  ----- */
+/* ----- Section & Titles  ----- */
 
 .section {
   width: 100%;
   margin: auto;
-  text-align: center;
-  border-top: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding-top: 4em;
+  padding-bottom: 1em;
+}
+
+.section > h3 {
+  margin-bottom: 1em;
   font-weight: 900;
 }
 
 /* ----- Vertical Centered CSS (for paragraphs)  ----- */
 
 .vertical-centered {
+  width: 90%;
   margin: 0;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  content: antiquewhite;
 }
 
 /* ----- Expandable Education Section  ----- */
@@ -173,7 +194,7 @@ footer > ul > li > a {
 
 /* ----- Navbar Animations ----- */
 .nav-item > a {
-  border-radius: 0.75em 0 0.75rem 0;
+  border-radius: 8px;
 }
 
 .nav-item:hover,
@@ -181,7 +202,6 @@ footer > ul > li > a {
 .nav-item > a:hover,
 .nav-item > a:focus {
   text-decoration: none;
-  background-color: #f80;
   transition: transform 0.25s;
   transform: translateY(-0.25em);
   box-shadow: 0 0.5em 0.5em -0.4em #000;
@@ -202,130 +222,14 @@ footer > ul > li > a {
   font-size: 1em;
 }
 
+.language-text {
+  padding-right: 5px;
+  font-size: 18px;
+}
+
 .language-icon {
-  height: 17px;
-  width: 17px;
+  height: 24px;
+  aspect-ratio: 1;
   border: 1px solid #fff;
-  border-radius: 1em;
-}
-
-/* ----- Button Colors  ----- */
-
-.bg-tr {
-  background-color: #E30A17;
-}
-
-.bg-en {
-  background-color: #012169;
-}
-
-.bg-courses {
-  background-color: #f80;
-  color: #000;
-}
-
-.bg-project {
-  background-color: #fc0;
-  color: #000;
-}
-
-.bg-links {
-  background-color: #08f;
-  color: #000;
-}
-
-.bg-close {
-  background-color: #b00;
-  color: #fff;
-}
-
-/* ----- DARK THEME OPERATIONS  ----- */
-
-.dark-body {
-  background-color: #131313;
-}
-
-.dark-main {
-  color: #fff !important;
-}
-
-.dark-modal {
-  background-color: #343a40;
-  color: #fff;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #131313;
-  }
-
-  main {
-    color: #fff;
-  }
-
-  .bg-light {
-    background-color: #343a40 !important;
-    color: #fff !important;
-  }
-
-  .nav-item > a {
-    color: #fff;
-  }
-
-  #dark-theme-selection {
-    display: none;
-  }
-
-  .modal-content {
-    background-color: #343a40;
-    columns: #fff;
-  }
-}
-
-/* ----- SCREEN SIZE BASED OPERATIONS  ----- */
-
-/* Mobile Devices */
-@media only screen and (max-width: 375px) {
-  .language-text {
-    display: none;
-  }
-}
-@media only screen and (max-width: 575px) {
-  main {
-    width: 100%;
-    padding: 1em;
-  }
-  .crs-size {
-    max-width: 900px;
-    max-height: 400px !important;
-    min-height: 400px !important;
-  }
-  .vertical-centered {
-    margin: 0;
-    position: relative;
-  }
-}
-/* Tablets */
-@media only screen and (min-width: 576px) and (max-width: 991px) {
-  main {
-    width: 100%;
-    padding: 1em;
-  }
-  .navbar {
-    font-size: 1.5rem;
-  }
-  .vertical-centered {
-    margin: 0;
-    position: relative;
-  }
-}
-/* Lower Res Desktop - HD*/
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  main,
-  footer {
-    width: 90%;
-  }
-  .navbar {
-    font-size: 1.5rem;
-  }
+  border-radius: 24px;
 }

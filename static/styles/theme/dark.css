@@ -1,0 +1,113 @@
+/* --- Dark Theme  --- */
+
+.dark-body {
+    background-color: #131313;
+}
+  
+ /* Dark Theme Main */
+.dark-main {
+    background: #222;
+    color: #fff;
+}
+  
+/* Dark Card */
+.dark-card {
+    background: #222;
+    color: #fff;
+    border: 1px solid #555;
+}
+  
+.dark-card-header {
+    border-bottom: 1px solid #333;
+}
+  
+.dark-card-footer {
+    border-top: 1px solid #333;
+}
+
+/* Index styles */
+.dark-modal {
+    background-color: #343a40;
+    color: #fff;
+}
+  
+/* Dark Theme Inputs */
+.dark-input,
+.dark-textarea,
+.dark-select {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+  
+.dark-input:invalid {
+    background-color: #944;
+}
+  
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #131313;
+    }
+  
+    main,
+    .modal-content {
+        background: #222 !important;
+        color: #fff;
+        box-shadow: 0 0 30px #222;
+    }
+  
+    .card {
+        background: #222;
+        color: #fff;
+        border: 1px solid #555;
+    }
+  
+    .card-header {
+        border-bottom: 1px solid #333;
+    }
+  
+    .card-footer {
+        border-top: 1px solid #333;
+    }
+  
+    .table {
+        background-color: #333;
+        color: #fff;
+    }
+  
+    input,
+    select,
+    textarea {
+        background-color: #333 !important;
+        color: #fff !important;
+    }
+  
+    input:invalid {
+        background-color: #944;
+    }
+  
+    #dark-theme-selection {
+        display: none;
+    }
+  
+    .select2-results,
+    .select2-dropdown,
+    .select2-selection,
+    .select2-selection__rendered {
+        background-color: #333 !important;
+        color: #fff !important;
+    }
+
+    /* Index styles */
+    .navbar-light {
+        background-color: #343a40;
+    }
+
+    .nav-item > a {
+        color: #fff;
+    }
+
+    .modal-content {
+        background-color: #343a40;
+        columns: #fff;
+    }
+}

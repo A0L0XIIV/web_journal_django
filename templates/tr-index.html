@@ -41,9 +41,10 @@
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
     <script src="{% static 'scripts/index.js' %}"></script>
   </head>
+
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top px-5 row">
+    <nav class="navbar navbar-expand-xl navbar-light sticky-top px-5 row">
       <a class="navbar-brand col-8 col-xl-2" href="">BARAN KAYA</a>
       <!-- Menu button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,25 +58,25 @@
       <div class="collapse navbar-collapse col-0 col-xl-8 text-center" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
-            <a href="#1" id="nav-item-1">Hakkımda</a>
+            <a href="#hakkimda" id="nav-item-1">Hakkımda</a>
           </li>
           <li class="nav-item">
-            <a href="#2" id="nav-item-2">Kariyer</a>
+            <a href="#kariyer" id="nav-item-2">Kariyer</a>
           </li>
           <li class="nav-item">
-            <a href="#3" id="nav-item-3">Yüksek Lisans</a>
+            <a href="#yuksek-lisans" id="nav-item-3">Yüksek Lisans</a>
           </li>
           <li class="nav-item">
-            <a href="#4" id="nav-item-4">Lisans</a>
+            <a href="#lisans" id="nav-item-4">Lisans</a>
           </li>
           <li class="nav-item">
-            <a href="#5" id="nav-item-5">Projelerim</a>
+            <a href="#proje" id="nav-item-5">Projelerim</a>
           </li>
           <li class="nav-item">
-            <a href="#6" id="nav-item-6">Memleket</a>
+            <a href="#memleket" id="nav-item-6">Memleket</a>
           </li>
           <li class="nav-item">
-            <a href="#7" id="nav-item-7">Hobilerim</a>
+            <a href="#hobi" id="nav-item-7">Hobilerim</a>
           </li>
         </ul>
       </div>
@@ -84,16 +85,12 @@
         <!-- Language buttons -->
         <div class="col-6">
           <a href="./" class="btn btn-link bg-en" style="width: max-content;">
-            <div class="row h-100 w-100 p-0 m-0">
-              <div class="col-9 p-0">
-                <span class="language-text">English</span>
-              </div>
-              <div class="col-3 p-0">
-                <img src="{% static 'images/united-kingdom.png' %}" alt="EN" class="language-icon">
-                <!--div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-                  Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-                </div-->
-              </div>
+            <div class="h-100 w-100 p-0 m-0">
+              <span class="language-text">English</span>
+              <img src="{% static 'images/united-kingdom.png' %}" alt="EN" class="language-icon">
+              <!--div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
+                Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+              </div-->
             </div>
           </a>
         </div>
@@ -110,15 +107,14 @@
         <h1 class="text-center">Web sayfama hoşgeldiniz!</h1>
       </div>
 
-      <div id="1">
-        <h3 class="section">Ben kimim?</h3>
+      <div id="hakkimda" class="section">
+        <h3>Ben kimim?</h3>
         <div class="row">
-          <div class="col-xs-12 col-sm-5">
+          <div class="col-xs-12 col-sm-6">
             <p class="vertical-centered">
               Benim adım Baran Kaya. 1994 Eskişehir doğumluyum. Üniversite eğitimi için İstanbul'a taşınana kadar Eskişehir'de yaşadım. İstanbul Teknik Üniversitesi'nden (İTÜ) Bilgisayar Mühendisliği lisans derecesine sahibim. İTÜ'den 2018 yılında mezun oldum ve Huawei Türkiye Ar-Ge Merkezi'nde asistan yazılım mühendisi çalışmaya başladım. 11 ay çalıştıktan sonra işimden ayrıldım ve Hamilton/Kanada'daki McMaster Üniversitesi'nde yüksek lisans eğitimime başladım. McMaster Üniversitesi'nden Bilgisayar ve Yazılım (CAS) Mühendisliği Yüksek Lisansı ile mezun oldum. Şu anda Providius'ta Yazılım Mühendisi olarak çalışıyorum. 
             </p>
           </div>
-          <div class="col-1 py-3"></div>
           <div class="col-xs-12 col-sm-6">
             <!-- Image Carousel (Bootstrap) -->
             <div
@@ -333,8 +329,8 @@
         </div>
       </div>
 
-      <div id="2">
-        <h3 class="section">Kariyer</h3>
+      <div id="kariyer" class="section">
+        <h3>Kariyer</h3>
         <div class="row">
           <div class="col-xs-12 col-sm-6">
             <!-- Image Carousel (Bootstrap) -->
@@ -478,8 +474,7 @@
             </div>
             <!-- End of image-->
           </div>
-          <div class="col-1 py-3"></div>
-          <div class="col-xs-12 col-sm-5">
+          <div class="col-xs-12 col-sm-6">
             <p class="vertical-centered">
               Lisans derecemle mezun olduktan sonra 2018 Ağustos ayında Huawei Türkiye Ar-Ge Merkezi'nde çalışmaya başladım. Wireless               DC departmanında assistan yazılım mühendisi olarak çalışmaktaydım. Ana projemiz baz istasyonu yönetim ve gözlem sistemiydi. Benim takımım bina içi baz istasyonun yazılımı üzerinde çalışıyordu. Genellikle bu projenin hata ayıklamaları ve özellik eklemeleriyle uğraşıyorduk. Sistem, tarayıcıda Java applet uygulaması kullanan bir web projesiydi. Sunucu tarafı C ile yazılmıştı ancak ben çoğunlukla Java ve JavaScript olan istemci üzerinde çalıştım. Daha sonra ikincil bir proje üzerinde çalışmaya başladık. Bireysel hedefler için dahili bir web sitesi projesiydi. Sistemi sıfırdan tasarladık ve ön uçta Angular, arka uçta Java Spring ve veritabanı olarak PostgreSQL kullandık. Çoğunlukla veritabanı tasarımı üzerine çalıştım ve ekip olarak projeyi uygulamaya başladık. Ama sonra diğer ana projeler ikincil projemizi engelledi ve durdu. 11 aylık Huawei yolculuğunun ardından, yüksek lisans eğitimi için işimden ayrıldım. Yüksek lisans mezuniyetimin ardından şu anda Providius'ta Yazılım Mühendisi olarak çalışıyorum. Canlı TV yayını için yazılım geliştiriyoruz.
             </p>
@@ -487,10 +482,10 @@
         </div>
       </div>
 
-      <div id="3">
-        <h3 class="section">Yüksek Lisans Derecesi</h3>
+      <div id="yuksek-lisans" class="section">
+        <h3>Yüksek Lisans Derecesi</h3>
         <div class="row">
-          <div class="col-xs-12 col-sm-5">
+          <div class="col-xs-12 col-sm-6">
             <p>
               McMaster Bilişim ve Yazılım bölümünün Mühendislik Yüksek Lisans (M.Eng.) programını okudum. Tezsiz yüksek lisans derecesi olması sebebiyle çalışmalarım sırasında 6 lisansüstü dersi alıp, 1 MEng bitirme projesi tamamladım. Aldığım kurslar, yüksek lisans projem ve McMaster hakkında daha fazla bilgiye düğmelerden erişebilirsiniz.
             </p>
@@ -576,7 +571,6 @@
               </div>
             </div>
           </div>
-          <div class="col-1 py-3"></div>
           <div class="col-xs-12 col-sm-6">
             <!-- Image Carousel (Bootstrap) -->
             <div
@@ -768,8 +762,8 @@
         </div>
       </div>
 
-      <div id="4">
-        <h3 class="section">Lisans Derecesi</h3>
+      <div id="lisans" class="section">
+        <h3>Lisans Derecesi</h3>
         <div class="row">
           <div class="col-xs-12 col-sm-6">
             <!-- Image Carousel (Bootstrap) -->
@@ -983,8 +977,7 @@
             </div>
             <!-- End of image-->
           </div>
-          <div class="col-1 py-3"></div>
-          <div class="col-xs-12 col-sm-5">
+          <div class="col-xs-12 col-sm-6">
             <p>
               İstanbul Teknik Üniversitesi'nde 5 yıl okudum. İlk yılım İngilizce hazırlık okuyarak geçti. Ardından 4 yıl Bilgisayar Mühendisliği eğitimi aldım. Kolay bir yolculuk değildi fakat İTÜ'den mezun olduğum için mutluyum. İlk dönemlerde zamanımın çoğunu matematik, fizik, kimya, Türkçe ve tarih gibi genel mühendislik derslerinde geçiridim. Daha sonra bölüme özel dersler başladı ve onlardan havuz derslerine nazaran daha çok keyif alarak okudum. Türkiye'de Bilgisayar Mühendisliği bölümleri yurtdışındaki gibi değil. Örneğin Kanada'da Bilgisayar Mühendisliği (Computer Engineering) ve Bilgisayar Bilimi (Computer Science) diye 2 ayrı bölüm mevcut. Türkiye'deki Bilgisayar Mühendisliği bölümleri bu ikisinin arasında bir yerde yer alıyor. Dolayısıyla ben Bilgisayar Mimarisi (Computer Architecture) gibi donanım derslerini alırken aynı zamanda Formal Methodlar ve Automata gibi teori derslerini de aldım. Aldığım derslere, mezuniyet projesine, İTÜ ve bölüm web sitelerine butonlarından ulaşabilirsiniz.
             </p>
@@ -1084,116 +1077,138 @@
         </div>
       </div>
 
-      <div id="5">
-        <h3 class="section">Projelerim</h3>
-        <ul class="text-center">
-          <li>
-            <span style="font-weight: bold;">Kodlama Hesaplarım:</span>
-          </li>
-          <li>
-            <a href="https://github.com/A0L0XIIV" target="_blank" rel="noopener noreferrer">
-              GitHub Hesabım
-            </a>
-          </li>
-          <li>
-            <a href="https://leetcode.com/A0L0XIIV" target="_blank" rel="noopener noreferrer">
-              LeetCode Hesabım
-            </a>
-          </li>
-          <li>
-            <a href="https://www.hackerrank.com/brnky" target="_blank" rel="noopener noreferrer">
-              HackerRank Hesabım
-            </a>
-          </li>
-          <br>
-          <li>
-            <span style="font-weight: bold;">Web projelerim:</span>
-          </li>
-          <li>
-            <a href="./journal-mockup/index.php" target="_blank" rel="noopener noreferrer">
-              Web Günlük mockup
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/A0L0XIIV/web_journal" target="_blank" rel="noopener noreferrer">
-              Web Günlük [GitHub] (PHP, JS, HTML&CSS)
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/A0L0XIIV/kayabaran-index-page" target="_blank" rel="noopener noreferrer">
-              kayabaran.com sayfası [GitHub] (JS, HTML&CSS)
-            </a>
-          </li>
-          <li>
-            <a href="./ParkRater/PHP/index.php" target="_blank" rel="noopener noreferrer">
-              ParkRater - McMaster University: CompSci 6WW3 course projem (PHP, JS, HTML&CSS)
-            </a>
-          </li>
-          <br>
-          <li>
-            <span style="font-weight: bold;">Unreal Engine 4 C++ oyun projelerim:</span>
-          </li>
-          <li>
-            <a href="https://github.com/A0L0XIIV/UnrealDemo-TPShooter" target="_blank" rel="noopener noreferrer">
-              Third Person Shooter oyun projem
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/A0L0XIIV/UnrealDemo-ToonTanks" target="_blank" rel="noopener noreferrer">
-              Toon Tanks oyun projem
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/A0L0XIIV/UnrealDemo-BuildingEscape" target="_blank" rel="noopener noreferrer">
-              Build Escape, ilk UE4 oyun projem
-            </a>
-          </li>
-          <br>
-          <li>
-            <span style="font-weight: bold;">Diğer projelerim:</span>
-          </li>
-          <li>
-            <a href="https://github.com/A0L0XIIV/Interview_Questions" target="_blank" rel="noopener noreferrer">
-              Bazı teknik mülakat soruları ve çözümleri (C++)
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/A0L0XIIV/Cpp-Socket" target="_blank" rel="noopener noreferrer">
-              C++ mesajlaşma programı, server-clients ve multithreading
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/A0L0XIIV/Tic-Tac-Toe" target="_blank" rel="noopener noreferrer">
-              ASCII Tic-Tac-Toe (C++) [Neden olmasın!]
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/A0L0XIIV/Decimal-Roman-Number" target="_blank" rel="noopener noreferrer">
-              Rakam-Roma sayısı çevirici (C++)
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/A0L0XIIV/RandomPasswordGenerator" target="_blank" rel="noopener noreferrer">
-              Rastgele şifre oluşturucu (C++)
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/A0L0XIIV/PythonSocket" target="_blank" rel="noopener noreferrer">
-              Python Soket (Python)
-            </a>
-          </li>
-        </ul>
+      <div id="proje" class="section">
+        <h3>Projelerim</h3>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <ul class="project-list">
+              <li>
+                <span style="font-weight: bold;">Kodlama Hesaplarım:</span>
+              </li>
+              <li>
+                <a href="https://github.com/A0L0XIIV" target="_blank" rel="noopener noreferrer"
+                  title="GitHub Hesabım">
+                  GitHub Hesabım
+                </a>
+              </li>
+              <li>
+                <a href="https://leetcode.com/A0L0XIIV" target="_blank" rel="noopener noreferrer"
+                  title="LeetCode Hesabım">
+                  LeetCode Hesabım
+                </a>
+              </li>
+              <li>
+                <a href="https://www.hackerrank.com/brnky" target="_blank" rel="noopener noreferrer"
+                  title="HackerRank Hesabım">
+                  HackerRank Hesabım
+                </a>
+              </li>
+              <br>
+              <li>
+                <span style="font-weight: bold;">Web projelerim:</span>
+              </li>
+              <li>
+                <a href="./journal-mockup/index.php" target="_blank" rel="noopener noreferrer"
+                  title="Web Günlük mockup">
+                  Web Günlük mockup
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/A0L0XIIV/web_journal" target="_blank" rel="noopener noreferrer"
+                  title="Web Günlük [GitHub] (PHP, JS, HTML&CSS)">
+                  Web Günlük [GitHub] (PHP, JS, HTML&CSS)
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/A0L0XIIV/kayabaran-index-page" target="_blank" rel="noopener noreferrer"
+                  title="kayabaran.com sayfası [GitHub] (JS, HTML&CSS)">
+                  kayabaran.com sayfası [GitHub] (JS, HTML&CSS)
+                </a>
+              </li>
+              <li>
+                <a href="./ParkRater/PHP/index.php" target="_blank" rel="noopener noreferrer"
+                  title="ParkRater - McMaster University: CompSci 6WW3 course projem (PHP, JS, HTML&CSS)">
+                  ParkRater - McMaster University: CompSci 6WW3 course projem (PHP, JS, HTML&CSS)
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <ul class="project-list">
+              <li>
+                <span style="font-weight: bold;">Unreal Engine 4 C++ oyun projelerim:</span>
+              </li>
+              <li>
+                <a href="https://github.com/A0L0XIIV/UnrealDemo-TPShooter" target="_blank" rel="noopener noreferrer"
+                  title="Third Person Shooter oyun projem">
+                  Third Person Shooter oyun projem
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/A0L0XIIV/UnrealDemo-ToonTanks" target="_blank" rel="noopener noreferrer"
+                  title="Toon Tanks oyun projem">
+                  Toon Tanks oyun projem
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/A0L0XIIV/UnrealDemo-BuildingEscape" target="_blank" rel="noopener noreferrer"
+                  title="Build Escape, ilk UE4 oyun projem">
+                  Build Escape, ilk UE4 oyun projem
+                </a>
+              </li>
+              <br>
+              <li>
+                <span style="font-weight: bold;">Diğer projelerim:</span>
+              </li>
+              <li>
+                <a href="https://github.com/A0L0XIIV/Interview_Questions" target="_blank" rel="noopener noreferrer"
+                  title="Bazı teknik mülakat soruları ve çözümleri (C++)">
+                  Bazı teknik mülakat soruları ve çözümleri (C++)
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/A0L0XIIV/Cpp-Socket" target="_blank" rel="noopener noreferrer"
+                  title="C++ mesajlaşma programı, server-clients ve multithreading">
+                  C++ mesajlaşma programı, server-clients ve multithreading
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/A0L0XIIV/Tic-Tac-Toe" target="_blank" rel="noopener noreferrer"
+                  title="ASCII Tic-Tac-Toe (C++) [Neden olmasın!]">
+                  ASCII Tic-Tac-Toe (C++) [Neden olmasın!]
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/A0L0XIIV/Decimal-Roman-Number" target="_blank" rel="noopener noreferrer"
+                  title="Rakam-Roma sayısı çevirici (C++)">
+                  Rakam-Roma sayısı çevirici (C++)
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/A0L0XIIV/RandomPasswordGenerator" target="_blank" rel="noopener noreferrer"
+                  title="Rastgele şifre oluşturucu (C++)">
+                  Rastgele şifre oluşturucu (C++)
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/A0L0XIIV/PythonSocket" target="_blank" rel="noopener noreferrer"
+                  title="Python Soket (Python)">
+                  Python Soket (Python)
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div id="6">
-        <h3 class="section">Memleket</h3>
+      <div id="memleket" class="section">
+        <h3>Memleket</h3>
         <div class="row">
-          <div class="col-xs-12 col-sm-5">
+          <div class="col-xs-12 col-sm-6">
             <p class="vertical-centered">
               Eskişehir benim memleketim ve Türkiye'nin en güzel şehirlerinden biri. Öğrencei şehri olarak bilinen Eskişehir'de 3 adet üniversite bulunmakta. Türkiye'nin en çok ziyaret edilen şehirlerinden biri olan Eskişehir'in nüfusu yaklaşık 900.000 ve her geçen gün artmakta.
             </p>
           </div>
-          <div class="col-1 py-3"></div>
           <div class="col-xs-12 col-sm-6">
             <!-- Image Carousel (Bootstrap) -->
             <div
@@ -1431,13 +1446,14 @@
         </div>
       </div>
 
-      <div id="7">
-        <h3 class="section">Hobilerim</h3>
+      <div id="hobi" class="section">
+        <h3>Hobilerim</h3>
         <p class="text-center">
           Bilgisayar oyunlarını seviyorum ve onlar benim en sevdiğim hobim. Diğer mühendislik dereceleri yerine Bilgisayar Mühendisliği derecesi seçmemin nedeni onlar. Yazılım mühendisi olarak video oyun yazılımı üzerinde çalışmak istiyorum ve bu yüzden C ++ öğrenmek ve kullanmak istiyorum. Onun dışında arabaları ve bilimkurgu kitaplarını ve filmlerini/dizilerini seviyorum.
         </p>
       </div>
     </main>
+
     <footer class="text-center mx-auto">
       <ul>
         <li>

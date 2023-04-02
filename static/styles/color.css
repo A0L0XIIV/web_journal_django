@@ -1,0 +1,105 @@
+/* --- Define color variables --- */
+:root {
+    --primary-color: #ff7b00;
+    --secondary-color: #715;
+    --primary-text: #222;
+    --write: #0050ff;
+    --edit: #20cdee;
+    --show: #159030;
+    --graph: #ffc107;
+    --password: #ff6507;
+    --logout: #bb1010;
+    --login: #33e0b0;
+    --game: #2bc500;
+    --series: #5da2d8;
+    --movie: #ff599a;
+    --book: #f7ee43;
+}
+
+/* Günlük button colours */
+  
+.bg-write {
+    background-color: var(--write) !important;
+    color: #fff !important;
+}
+
+.bg-edit {
+    background-color: var(--edit) !important;
+    color: var(--primary-text) !important;
+}
+
+.bg-show {
+    background-color: var(--show) !important;
+    color: #000 !important;
+}
+
+.bg-graph {
+    background-color: var(--graph) !important;
+    color: var(--primary-text) !important;
+}
+
+.bg-password {
+    background-color: var(--password) !important;
+    color: var(--primary-text) !important;
+}
+
+.bg-logout {
+    background-color: var(--logout) !important;
+    color: #fff !important;
+}
+
+.bg-login {
+    background-color: var(--login) !important;
+    color: var(--primary-text) !important;
+}
+
+.bg-game {
+    background-color: var(--game) !important;
+    color: var(--primary-text) !important;
+}
+
+.bg-series {
+    background-color: var(--series) !important;
+    color: var(--primary-text) !important;
+}
+
+.bg-movie {
+    background-color: var(--movie) !important;
+    color: var(--primary-text) !important;
+}
+
+.bg-book {
+    background-color: var(--book) !important;
+    color: var(--primary-text) !important;
+}
+
+
+/* Index button colours */
+
+.bg-tr {
+    background-color: #E30A17;
+}
+  
+.bg-en {
+    background-color: #012169;
+}
+  
+.bg-courses {
+    background-color: #f80;
+    color: #000;
+}
+  
+.bg-project {
+    background-color: #fc0;
+    color: #000;
+}
+  
+.bg-links {
+    background-color: #08f;
+    color: #000;
+}
+  
+.bg-close {
+    background-color: #b00;
+    color: #fff;
+}

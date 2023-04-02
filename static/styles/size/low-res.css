@@ -1,0 +1,16 @@
+/* Lower Res Desktop - HD*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    .main {
+        /* Little bit background image */
+        width: 90%;
+    }
+    
+    .navbar {
+        font-size: 1.5rem;
+    }
+}
+  

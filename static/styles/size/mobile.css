@@ -1,0 +1,65 @@
+/* Mobile Devices */
+@media only screen and (max-width: 575px) {
+    .language-text {
+        display: none;
+    }
+
+    body {
+        font-size: 1rem;
+        background: #fff;
+        max-width: 100% !important;
+    }
+  
+    .main {
+        /* Use all screen space width */
+        width: 100%;
+        padding: 1em;
+    }
+  
+    /* Site name font size adjustment */
+    #websiteName a {
+        font-size: 1.5em;
+    }
+  
+    /* Input and select tags font and box sizes */
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="file"],
+    input[type="search"],
+    select {
+        width: 20rem !important;
+        height: 2.4rem !important;
+        font-size: 1.2rem !important;
+    }
+  
+    /* Checkbox and radio sizes */
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: 5rem !important;
+        height: auto !important;
+        font-size: 1.2rem !important;
+    }
+
+    /* Index styles */
+    .crs-size {
+        max-width: 900px;
+        max-height: 400px !important;
+        min-height: 400px !important;
+    }
+
+    .vertical-centered {
+        margin: 0;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    /* Index styles */
+    .language-text {
+        display: none;
+    }
+}
+  

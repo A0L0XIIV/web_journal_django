@@ -1,0 +1,46 @@
+/* Tablets */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    body {
+      font-size: 1rem;
+      background: #fff;
+    }
+  
+    .main {
+      /* Use all screen space width */
+      width: 100%;
+      padding: 1em;
+    }
+  
+    /* Input and select tags font and box sizes */
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="file"],
+    input[type="search"],
+    select {
+      width: 20rem !important;
+      height: 2rem !important;
+      font-size: 1.2rem !important;
+    }
+  
+    /* Checkbox and radio sizes */
+    input[type="checkbox"],
+    input[type="radio"] {
+      width: 10rem !important;
+      height: auto !important;
+      font-size: 1.5rem !important;
+    }
+
+    /* Index styles */
+    .navbar {
+        font-size: 1.5rem;
+    }
+
+    .vertical-centered {
+        margin: 0;
+        position: relative;
+    }
+}
+  
